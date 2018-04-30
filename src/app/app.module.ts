@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ListModule } from './list/list.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     HomepageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

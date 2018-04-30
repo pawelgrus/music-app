@@ -1,3 +1,15 @@
-<p>
-  search works!
-</p>
+<form #f="ngForm">
+
+	<div class="form-group">
+		<label for="latitude" class="control-label">Title <span
+			class="required">*</span></label> <input id="latitude" class="form-control"
+			min="0" required #InputTitle="ngModel" name="InputLatitude"
+			[(ngModel)]="title" onkeyup="dirty = true"> 
+			<span
+			*ngIf="InputTitle.errors?.required" class="text-danger">required</span>
+	</div>
+
+	<button type="button" class="btn btn-es-primary"
+		[disabled]="f.invalid || !(f.dirty)" (click)="onApply()">Apply
+	</button>
+</form>

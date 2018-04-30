@@ -1,0 +1,20 @@
+<div *ngIf="!searchInited">
+	<a (click)="onClickSearch()" href="#">Filter</a>
+	<table>
+	  <tr>
+	    <th>Title</th>
+	    <th>Artist</th>
+	    <th>Album</th>
+	  </tr>
+	  <tr>
+	    <td>Alfreds Futterkiste</td>
+	    <td>Maria Anders</td>
+	    <td>Germany</td>
+	  </tr>
+	</table>
+</div>
+
+<div *ngIf="searchInited">
+	<a (click)="onClickComeBack()" href="#">Come back</a>
+	<app-search></app-search>
+</div>

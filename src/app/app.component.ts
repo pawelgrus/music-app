@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'music-app';
+  listInited = false;
+
+  onClickList() {
+    this.listInited = true;
+  }
+
+  onClickComeBack() {
+    this.listInited = false;
+  }
 }

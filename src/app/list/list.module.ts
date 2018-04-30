@@ -1,3 +1,4 @@
+import { ListComponent } from './list/list.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchComponent } from './search/search.component';
@@ -6,6 +7,7 @@ import { SearchComponent } from './search/search.component';
   imports: [
     CommonModule
   ],
-  declarations: [SearchComponent]
+  exports: [ListComponent],
+  declarations: [SearchComponent, ListComponent]
 })
 export class ListModule { }
