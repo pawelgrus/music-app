@@ -1,20 +1,16 @@
-<div *ngIf="!searchInited">
+<div>
 	<a (click)="onClickSearch()" href="#">Filter</a>
+	<app-search></app-search>
 	<table>
 	  <tr>
 	    <th>Title</th>
 	    <th>Artist</th>
-	    <th>Album</th>
+	    <th>Length</th>
 	  </tr>
-	  <tr>
-	    <td>Alfreds Futterkiste</td>
-	    <td>Maria Anders</td>
-	    <td>Germany</td>
+	  <tr *ngFor="let album of albumList">
+	  	<td>{{album.title}}</td>
+	  	<td>{{album.artist}}</td>
+	  	<td>{{album.length}}</td>
 	  </tr>
 	</table>
-</div>
-
-<div *ngIf="searchInited">
-	<a (click)="onClickComeBack()" href="#">Come back</a>
-	<app-search></app-search>
 </div>
