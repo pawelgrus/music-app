@@ -1,6 +1,8 @@
 <div>
 	<a (click)="onClickSearch()" href="#">Filter</a>
-	<app-search></app-search>
+	<app-search (search)="filter($event)" [searchMode]="'BASIC'"></app-search>
+	<br>
+	<br>
 	<table>
 	  <tr>
 	    <th>Title</th>
@@ -11,6 +13,7 @@
 	  	<td>{{album.title}}</td>
 	  	<td>{{album.artist}}</td>
 	  	<td>{{album.length}}</td>
+	  	<td><button>Edit</button></td>
 	  </tr>
 	</table>
 </div>
