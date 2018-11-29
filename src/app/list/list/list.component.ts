@@ -14,7 +14,7 @@ export class ListComponent implements OnInit {
   private orginalAlbumList: IAlbum[] = [];
 
   constructor(private listService: ListService, private zone: NgZone) {
-    this.listService.search.subscribe(event => {
+    this.listService.$search.subscribe(event => {
       this.albumList = this.orginalAlbumList.filter(al => {
         return event.title !== null && al.title.startsWith(event.title);
       });

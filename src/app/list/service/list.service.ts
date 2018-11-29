@@ -6,7 +6,11 @@ import { Subject, Observable } from 'rxjs';
 
 @Injectable()
 export class ListService {
-  search = new Subject<IAlbumFilter>();
+  private search = new Subject<IAlbumFilter>();
+  $search: Observable<IAlbumFilter>;
+  constructor() {
+    this.$search = this.search.asObservable();
+  }
 
   public setSearch(search: IAlbumFilter): void {
     this.search.next(search);
